@@ -1,1 +1,3 @@
-export { WebpackPlugin } from './WebpackPlugin';
+import { WebpackPlugin } from './WebpackPlugin';
+
+module.exports = WebpackPlugin
