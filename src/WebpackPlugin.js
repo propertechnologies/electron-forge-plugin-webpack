@@ -1,7 +1,6 @@
-import fs from 'fs-extra';
 import merge from 'webpack-merge';
 import path from 'path';
-import { spawnPromise } from 'spawn-rx';
+import { asyncOra } from '@electron-forge/async-ora';
 import webpack from 'webpack';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackDevMiddleware from 'webpack-dev-middleware';
@@ -27,7 +26,7 @@ export class WebpackPlugin {
     this.isProd = false;
   }
 
-  init(dir, forgeConfig, asyncOra) {
+  init(dir, forgeConfig) {
     this.dir = dir;
     this.asyncOra = asyncOra;
     this.baseDir = path.resolve(dir, '.webpack');
