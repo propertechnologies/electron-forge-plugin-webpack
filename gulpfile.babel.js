@@ -1,19 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
+const gulp = require('gulp');
+const babel = require('gulp-babel');
 
-import gulp from 'gulp';
-
-import babel from 'gulp-babel';
-import fs from 'fs';
-import path from 'path';
-
-gulp.task('transpile', () =>
+gulp.task('build', () =>
     gulp.src('./src/**/*.js')
       .pipe(babel())
       .pipe(gulp.dest('./dist'))
 );
 
-gulp.task('watch', ['build'], () => {
+gulp.task('watch', gulp.series(gulp.parallel('build')), () => {
   gulp.watch('./src/**/*.js', ['transpile']);
 });
-
-gulp.task('build', ['transpile']);
