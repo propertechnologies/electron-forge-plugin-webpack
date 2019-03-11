@@ -96,6 +96,7 @@ export class WebpackPlugin {
         new HtmlWebpackPlugin({
           title: entryPoint.name,
           template: entryPoint.html,
+          templateParameters: entryPoint.templateParameters || {}
         })
       ].concat(this.isProd ? [] : [new webpack.HotModuleReplacementPlugin()]),
     }, rendererConfig);
