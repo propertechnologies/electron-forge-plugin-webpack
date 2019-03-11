@@ -1,6 +1,6 @@
 {
   "name": "proper-electron-forge-plugin-webpack",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Webpack plugin for forge",
   "main": "dist/index.js",
   "author": "Samuel Attard",
@@ -26,7 +26,9 @@
     "presets": [
       "@babel/preset-env"
     ],
-    "plugins": ["@babel/plugin-transform-runtime"]
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
