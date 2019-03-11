@@ -1,6 +1,6 @@
 {
   "name": "proper-electron-forge-plugin-webpack",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Webpack plugin for forge",
   "main": "dist/index.js",
   "author": "Samuel Attard",
