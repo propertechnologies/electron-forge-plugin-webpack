@@ -38,14 +38,13 @@ Just Work(tm).
 ## Plugin Configuration
 
 ```js
+const mainWebpackConfig = require('./xx/webpack.main.config.js)
+const rendererWebpackConfig = require('./xx/webpack.renderer.config.js)
+
 new WebpackPlugin({
-  mainConfig: {
-    // webpack config for main process
-  },
+  mainConfig: mainWebpackConfig,
   renderer: {
-    config: {
-      // webpack configuration for renderer processes
-    },
+    config: rendererWebpackConfig,
     // Array of items to be prefixed to the "entry" array in the
     // renderer webpack config.  Useful for things like
     // 'react-hot-loader/patch'
