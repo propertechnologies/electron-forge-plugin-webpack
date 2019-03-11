@@ -25,7 +25,8 @@
     "sourceMaps": "inline",
     "presets": [
       "@babel/preset-env"
-    ]
+    ],
+    "plugins": ["@babel/plugin-transform-runtime"]
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
